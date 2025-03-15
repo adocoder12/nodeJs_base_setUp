@@ -39,24 +39,27 @@ npm run build
 npm start
 Project Structure
 
-nodeJs_base_setUp/
-├── src/
-│ ├── api/ # Configuration files and environment variables
-│ ├── controllers/ # Route controllers with business logic
-│ ├── model/ # Custom middleware (error handling, security, etc.)
-│ ├── routes/ # Express route definitions
-│ ├── utils/
-│ ├── middleware/ # Custom middleware (error handling, security, etc.)
-│ ├── movie.json/  
-│ ├── types/ # TypeScript type definitions
-│ └── app.ts # Main Express application setup
-│ └── index.ts # Where the app is running
+## project files
 
-├── tests/ # Unit and integration tests
+├── src/
+│ ├── api/
+│ │ ├── controllers/ # Business logic for handling requests
+│ │ ├── models/ # Data models and schemas
+│ │ ├── routes/ # Route definitions and API endpoints
+│ │
+│ ├── config/ # Configuration files and environment variables
+│ ├── utils/ # Utility functions and helpers
+│ │ ├── middleware/ # Custom middleware (e.g., error handling, security)
+│ │ └── movie.json # Sample data or configuration related to movies
+│ │
+│ ├── types/ # TypeScript type definitions
+│ ├── app.ts # Main Express application setup
+│ └── index.ts # Application entry point
+│
 ├── .env.example # Example environment configuration
-├── package.json
-├── tsconfig.json
-└── README.md
+├── package.json # Project metadata and dependencies
+├── tsconfig.json # TypeScript configuration
+└── README.md # Project documentation
 Contributing
 
 Contributions are welcome! If you have suggestions, improvements, or bug fixes, please open an issue or submit a pull request. When contributing, please adhere to the existing coding style and include appropriate tests.
@@ -68,9 +71,3 @@ This project is licensed under the MIT License.
 ##Author
 
 adocoder12
-
-Acknowledgments
-
-Node.js & Express: For providing a solid foundation for building scalable web applications.
-TypeScript Community: For promoting type safety and maintainability in modern JavaScript development.
-Open Source Contributors: For continuously improving the ecosystem through shared knowledge and collaboration.
