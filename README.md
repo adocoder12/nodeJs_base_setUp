@@ -60,7 +60,8 @@ Project Structure
 ├── package.json # Project metadata and dependencies
 ├── tsconfig.json # TypeScript configuration
 └── README.md # Project documentation
-Contributing
+
+### Contributing
 
 Contributions are welcome! If you have suggestions, improvements, or bug fixes, please open an issue or submit a pull request. When contributing, please adhere to the existing coding style and include appropriate tests.
 
