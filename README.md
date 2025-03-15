@@ -4,14 +4,14 @@ A robust starter template for building Node.js applications with TypeScript and 
 
 ## Features
 
-TypeScript & Express: A modern setup using TypeScript for type safety and Express for the web framework.
-Modular Architecture: Organized folder structure for controllers, routes, middleware, and types.
-Custom Error Handling: Built-in custom error class and centralized error-handling middleware.
-Security Best Practices: Integration of Helmet and other middleware to enhance security.
-Environment Configuration: Support for environment variables with a sample .env file.
-Linting & Formatting: Pre-configured ESLint and Prettier for consistent code style.
-Scalable & Maintainable: A clear project structure that’s easy to expand and maintain.
-Prerequisites
+- TypeScript & Express: A modern setup using TypeScript for type safety and Express for the web framework.
+- Modular Architecture: Organized folder structure for controllers, routes, middleware, and types.
+- Custom Error Handling: Built-in custom error class and centralized error-handling middleware.
+- Security Best Practices: Integration of Helmet and other middleware to enhance security.
+- Environment Configuration: Support for environment variables with a sample .env file.
+- Scalable & Maintainable: A clear project structure that’s easy to expand and maintain.
+
+### Prerequisites
 
 Node.js (v14 or higher recommended)
 npm Installation
