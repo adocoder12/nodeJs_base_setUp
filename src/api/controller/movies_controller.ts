@@ -12,6 +12,8 @@ const getMovies = async (req: Request, res: Response, next: NextFunction) => {
   const { genre } = req.query;
 
   try {
+    console.log(movies[0].title.toLowerCase());
+
     if (genre) {
       const filteredMovies = movies.filter((movie) =>
         movie.genre.some(
@@ -29,6 +31,30 @@ const getMovies = async (req: Request, res: Response, next: NextFunction) => {
     res.status(200).json({ message: "Movies found", data: movies });
   } catch (error) {
     console.log("error", error);
+    next(error);
+  }
+};
+
+const getMovieByName = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  const { name } = req.params;
+  try {
+    if (!name) {
+      throw new CustomError("Provide a movie name", 400);
+    }
+
+    const movie = movies.find(
+      (movie) => movie.title.toLowerCase() === name.toLowerCase()
+    );
+
+    if (!movie) {
+      throw new CustomError("Movie not found", 404);
+    }
+    res.status(200).json({ message: "Movie found", data: movie });
+  } catch (error) {
     next(error);
   }
 };
@@ -109,4 +135,4 @@ const updateMovie = async (req: Request, res: Response, next: NextFunction) => {
     next(error);
   }
 };
-export { getMovies, getMovieByID, updateMovie, addMovie };
+export { getMovies, getMovieByID, updateMovie, addMovie, getMovieByName };
