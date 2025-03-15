@@ -8,6 +8,10 @@ enum Genre {
   Documentary = "Documentary",
   Drama = "Drama",
   Family = "Family",
+  Fantasy = "Fantasy",
+  Thriller = "Thriller",
+  Horror = "Horror",
+  SciFi = "Sci-Fi",
 }
 
 type movie = {
@@ -18,7 +22,7 @@ type movie = {
   duration: number;
   poster: string;
   genre: Genre[] | Genre;
-  rate: string;
+  rate: number;
 };
 
 export default movie;

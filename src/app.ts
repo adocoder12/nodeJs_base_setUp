@@ -1,4 +1,5 @@
 import express, { Request, Response, NextFunction } from "express";
+import helmet from "helmet";
 import cors from "cors";
 //routes
 import routes from "./api/routes/index";
@@ -8,12 +9,16 @@ import { notFound, errorHandler } from "./utils/middlewares";
 const app = express();
 
 app.disable("x-powered-by");
+
+//For parsing application/json
 app.use(express.json());
-app.use(cors());
+
+//For security best practices through HTTP headers.
+app.use(helmet());
 
 /*--- CORS ---*/
 
-// app.use("*", cors());
+app.use(cors());
 app.use(function (req: Request, res: Response, next: NextFunction) {
   res.header(
     "Access-Control-Allow-Origin",
